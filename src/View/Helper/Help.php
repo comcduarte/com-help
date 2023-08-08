@@ -5,9 +5,17 @@ use Laminas\Form\View\Helper\AbstractHelper;
 
 class Help extends AbstractHelper
 {
-    public function __invoke()
+    private $icon;
+    
+    public function __invoke($icon)
     {
-        $html = '<i class="fa-sharp fa-regular fa-circle-info fa-beat-fade"></i>';
+        $this->icon = $icon;
+        return $this->render();
+    }
+    
+    public function render()
+    {
+        $html = sprintf( '<i class="fas %s"></i>', $this->icon);
         return $html;
     }
 }

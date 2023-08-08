@@ -38,6 +38,19 @@ class HelpForm extends AbstractBaseForm
         ],['priority' => 100]);
         
         $this->add([
+            'name' => 'ICON',
+            'type' => Text::class,
+            'attributes' => [
+                'id' => 'ICON',
+                'class' => 'form-control',
+                'required' => 'true',
+            ],
+            'options' => [
+                'label' => 'Icon',
+            ],
+        ],['priority' => 100]);
+        
+        $this->add([
             'name' => 'TEXT',
             'type' => Textarea::class,
             'attributes' => [

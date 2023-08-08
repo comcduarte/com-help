@@ -39,6 +39,7 @@ class HelpConfigController extends AbstractConfigController
         $ddl->addColumn(new Datetime('DATE_CREATED', TRUE));
         $ddl->addColumn(new Datetime('DATE_MODIFIED', TRUE));
         
+        $ddl->addColumn(new Varchar('ICON', 32, TRUE));
         $ddl->addColumn(new Varchar('NUMBER', 10, TRUE));
         $ddl->addColumn(new Varchar('TITLE', 50, TRUE));
         $ddl->addColumn(new Text('TEXT', 65535, TRUE));
